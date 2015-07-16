@@ -1,0 +1,77 @@
+
+//Invoke Launch
+
+{
+  "version": "1.0",
+  "session": {
+    "new": true,
+    "application": {
+      "applicationId": "" //your app ID here
+    },
+    "sessionId": "session1234",
+    "attributes": {},
+    "user": {
+      "userId": "12345"
+    }
+  },
+  "request": {
+    "type": "LaunchRequest",
+    "requestId": "request5678"
+  }
+}
+
+
+//Intent - command
+
+{
+  "version": "1.0",
+  "session": {
+    "new": false,
+    "application": {
+      "applicationId": "" //your app ID here
+    },
+    "sessionId": "session1234",
+    "attributes": {},
+    "user": {
+      "userId": "12345"
+    }
+  },
+  "request": {
+    "type": "IntentRequest",
+    "requestId": "request5678",
+    "intent": {
+      "name": "commandI",
+      "slots": {
+        "Command": {
+          "name": "Command",
+          "value": "pause"
+        },
+        "Device" : {
+          "name": "Device",
+          "value": "roku"
+        }
+      }
+    }
+  }
+}
+
+//OnSessionEnded
+
+{
+  "version": "1.0",
+  "session": {
+    "new": false,
+    "application": {
+      "applicationId": "" //your app ID here
+    },
+    "sessionId": "session1234",
+    "attributes": {},
+    "user": {
+      "userId": "12345"
+    }
+  },
+  "request": {
+    "type": "SessionEndedRequest",
+    "requestId": "request5678"
+  }
+}
