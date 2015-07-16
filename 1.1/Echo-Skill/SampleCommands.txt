@@ -1,0 +1,30 @@
+commandI please {pause|Command}
+commandI please {turn off|Command}
+commandI please {decrease the volume|Command}
+commandI tell the {tv|Device} to {pause|Command}
+commandI tell the {tv|Device} to {turn off|Command}
+commandI tell the {tv|Device} to {decrease the volume|Command}
+commandI tell the {living room|Device} to {pause|Command}
+commandI tell the {living room|Device} to {turn off|Command}
+commandI tell the {living room|Device} to {decrease the volume|Command}
+commandI tell the {game room tv|Device} to {power|Command}
+commandI tell the {game room tv|Device} to {turn off|Command}
+commandI tell the {game room tv|Device} to {decrease the volume|Command}
+commandI ask {tv|Device} to {pause|Command}
+commandI ask {tv|Device} to {turn off|Command}
+commandI ask {tv|Device} to {decrease the volume|Command}
+commandI ask {living room|Device} to {pause|Command}
+commandI ask {living room|Device} to {turn off|Command}
+commandI ask {living room|Device} to {decrease the volume|Command}
+commandI ask {game room tv|Device} to {power|Command}
+commandI ask {game room tv|Device} to {turn off|Command}
+commandI ask {game room tv|Device} to {decrease the volume|Command}
+commandI tell {tv|Device} to {pause|Command}
+commandI tell {tv|Device} to {turn off|Command}
+commandI tell {tv|Device} to {decrease the volume|Command}
+commandI tell {living room|Device} to {pause|Command}
+commandI tell {living room|Device} to {turn off|Command}
+commandI tell {living room|Device} to {decrease the volume|Command}
+commandI tell {game room tv|Device} to {power|Command}
+commandI tell {game room tv|Device} to {turn off|Command}
+commandI tell {game room tv|Device} to {decrease the volume|Command}
