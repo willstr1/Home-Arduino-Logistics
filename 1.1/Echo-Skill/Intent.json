@@ -1,0 +1,17 @@
+
+"intents": [
+   {
+      "intent" : "commandI",
+      "slots" : [
+      {
+         "name" : "Command",
+         "type": "LITERAL"
+      },
+      {
+         "name" : "Device",
+         "type": "LITERAL"
+      }
+      ]
+   }
+   ]
+}
