@@ -1,0 +1,27 @@
+Skill Information
+Name: Home Arduino Logistics
+Invocation Name: home logistics
+Version: 1.0
+Endpoint (type): Lambda ARN
+Endpoint (URL/ARN): [the ARN of your lambda function]
+
+Interaction Model
+Intent Schema: [import from Intent.json file]
+Sample Utterances: [import from SampleCommands.txt]
+
+Test
+Skill ready for testing: Enable
+
+Publishing Information
+Image: [use the HALLogo.png file]
+Category: Home-Automation
+Skill Description: This app is designed to let you link arduino devices to your echo. Note you will be required to install software on your arduino. Original Skill built by WillStr1
+Ex Phrase 1: Alexa tell home logistics to please [custom command]
+Ex Phrase 2: Alexa tell home logistics to command [device] to [custom command]
+Ex Phrase 3: Alexa tell home logistics to tell [device] to [custom command]
+Does the skill allow users to make purchases/spend real money?: No
+Account Linking/Creation: No
+Does the skill collect users personal info: No
+Privacy Policy URL: http://www.willstr1.com/p/home-arduino-logistics.html [this is just here so there is an easy link to my blog on your Echo skills page incase you need to contact me]
+Terms of Use URL: http://www.willstr1.com/p/home-arduino-logistics.html [this is just here so there is an easy link to my blog on your Echo skills page incase you need to contact me]
+
