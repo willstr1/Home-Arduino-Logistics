@@ -1,7 +1,7 @@
 # Home-Arduino-Logistics
 An Amazon Echo Skill that allows you to send simple commands to an internet connected Arduino 
 
-For more info check out my website willstr1.com
+For more info check out my website www.willstr1.com
 <p/>
 <h2>Setup instructions:</h2>
 1.	Set up NearBus on your Arduino
