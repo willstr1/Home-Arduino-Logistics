@@ -1,7 +1,4 @@
-/*
-This file is part of the Home Arduino Logistics skill for Amazon Echo. If you have an questions please see the documentation included with the download or visit my website www.willstr1.com
-*/
-//this is the customizable section of the code please fill out the switch statments to fit your devices and commands 
+//define switch statments 
 //for devices
 function getDevice(device, response) {
 	var nearDev = '';
@@ -13,30 +10,28 @@ function getDevice(device, response) {
 			nearDev = 'NB######';
 			break;
 		default:
-			response.tellWithCard("unknown device","Unkown Device","Device: " + device);
+			response.askWithCard("we have not been introduced yet", "anything else", "Unkown Device","Device: " + device);
 			break;
 		}
 	return nearDev;
 }
 exports.getDevice = getDevice;
+
 //for commands
 function getCmd(command, response) {
 	var nearCmd = '';
 	switch(command) {
 		//the names for command 1
-		case "pause":
-		case "play":
+		case "power":
 			nearCmd = '1';
 			break;
-		//the names for command 2
-		case "power":
-		case "on":
-		case "off":
+		case "pause":
+		case "play":
 			nearCmd = '2';
 			break;
 		//put in additional sets of command names for additional commands
 		default:
-			response.tellWithCard("unknown command", "Unkown Command","Command: " + command);
+			response.askWithCard("I have not learned that one yet", "anything else", "Unkown Command","Command: " + command);
 			break;
 		}
 	return nearCmd;
