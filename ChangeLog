@@ -1,0 +1,11 @@
+1.0 - Initial Release
+
+1.1 - Customizablity Update
+ - created seperate files for the user functions allowing easier updating for users
+   - this way they don't have to rewrite their switch statments everytime there is an update
+ - additional versions of the arduino code to support different arduino types (now supports Yun, Wifi, and Ethernet)
+   - note: because I do not own a Wifi or Ethernet shield those codes are not properly tested please let me know if you have issues
+
+1.2 - Natural Language Update
+ - now the session will remain open (so you don't have to say "Alexa tell home logistics" before every command)
+ - improved some of the responces to feel more natural
