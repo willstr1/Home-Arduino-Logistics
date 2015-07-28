@@ -1,6 +1,9 @@
 commandI please {pause|Command}
 commandI please {turn off|Command}
 commandI please {decrease the volume|Command}
+commandI now {pause|Command}
+commandI now {turn off|Command}
+commandI now {decrease the volume|Command}
 commandI tell the {tv|Device} to {pause|Command}
 commandI tell the {tv|Device} to {turn off|Command}
 commandI tell the {tv|Device} to {decrease the volume|Command}
@@ -28,3 +31,8 @@ commandI tell {living room|Device} to {decrease the volume|Command}
 commandI tell {game room tv|Device} to {power|Command}
 commandI tell {game room tv|Device} to {turn off|Command}
 commandI tell {game room tv|Device} to {decrease the volume|Command}
+open open
+close thank you
+close close
+close thanks
+close no thank you
