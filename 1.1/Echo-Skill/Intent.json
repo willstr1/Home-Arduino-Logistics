@@ -1,5 +1,5 @@
-
-"intents": [
+{
+   "intents": [
    {
       "intent" : "commandI",
       "slots" : [
@@ -12,6 +12,14 @@
          "type": "LITERAL"
       }
       ]
+   },
+   {
+      "intent" : "open",
+      "slots" : []
+   },
+   {
+      "intent" : "close",
+      "slots" : []
    }
    ]
 }
