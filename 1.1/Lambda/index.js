@@ -1,6 +1,3 @@
-/*
-This file is part of the Home Arduino Logistics skill for Amazon Echo. If you have an questions please see the documentation included with the download or visit my website www.willstr1.com
-*/
 var http = require('http');
 var AlexaSkill = require('./AlexaSkill');
 var userFunction = require('./userFunction');
@@ -26,6 +23,7 @@ var dest = '';
 var outS = '';
 var outT = '';
 var outC = '';
+var outR = '';
 var found = true;
 
 var HomeLogistics = function () {
@@ -39,10 +37,10 @@ HomeLogistics.prototype.constructor = HomeLogistics;
 HomeLogistics.prototype.intentHandlers = {
 	commandI: function (intent, session, response) {
 		function satisfyAlexa() {
-			console.log('callback called');
+			console.log('command sent');
 			var logT = 'Host: ' + nearHost + '  Port: ' + String(nearPort) + '  Path: ' + dest + '  Method: ' + nearMethod + '  Request ID: ' + nearRID;
 			console.log(logT);
-			response.tellWithCard(outS, outT, outC);
+			response.askWithCard(outS, outR, outT, outC);
 		};
 		//load inputs
 		cmdIn = intent.slots.Command.value;
@@ -60,9 +58,10 @@ HomeLogistics.prototype.intentHandlers = {
 		//send the command
 		//random number gen to create the request ID
 		dest = '/v1/api_vmcu_jsb/' + nearDev + '?user=' + nearUser + '&pass=' + nearPass + '&channel=0&service=MY_NBIOS_0&value=' + nearCmd + '&method=POST&reqid=' + nearRID;
-		outS = 'command sent';
+		outS = 'got it'; //need to find better wording
+		outR = 'anything else';
 		outT = 'Command Sent';
-		outC = 'Device: ' + nearDev + '  Command: ' + nearCmd;
+		outC = 'Device ID: ' + nearDev + '   Command Heard: ' + cmdIn + '  Command ID: ' + nearCmd;
 		var options = {
 			hostname: nearHost,
 			port: nearPort,
@@ -71,16 +70,38 @@ HomeLogistics.prototype.intentHandlers = {
 		};
 		var req = http.request(options, satisfyAlexa);
 		req.end();
+	},
+	//put in an intent for opening a session - opens just responds with a greeting
+	open: function (intent, session, response) {
+		//respond
+		console.log('session opened'); //posibly output a session ID?
+		outS = 'hello'; //better greeting?
+		outT = 'Session Opened';
+		outC = 'To give a command just say Now or Please and then the command name, to close the session just say Thank You';
+		outR = 'are you still there';
+		response.askWithCard(outS, outR, outT, outC)
+	},
+	//put in an intent for closing a session
+	close: function (intent, session, response) {
+		//respond and close
+		console.log('session closed'); //possibly output a session ID?
+		outS = 'no problem';
+		outT = 'Session Closed';
+		outC = 'Session Closed by user';
+		response.tellWithCard(outS, outT, outC);
 	}
 };
 
 HomeLogistics.prototype.eventHandlers.onLaunch = function (launchRequest, session, response) {
 	console.log("no intent found requestID: " + launchRequest.requestId + ", sessionID: " + session.sessionId);
-	outS = 'I did not understand your request please repeat';
-	response.tell(outS);
+	outS = 'I did not understand your request';
+	outR = 'are you still there';
+	response.ask(outS, outR);
 };
 
 exports.handler = function (event, context) {
 	var homeLogistics = new HomeLogistics();
 	homeLogistics.execute(event, context);
 };
+
+
